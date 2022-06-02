@@ -118,6 +118,7 @@ layerControl.addOverlay(overlays.weather, "Wettervorhersage met.no");
             
         
            
+            
         
         
         marker.setPopupContent(popup).openPopup();
