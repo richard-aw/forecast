@@ -106,7 +106,15 @@ layerControl.addOverlay(overlays.weather, "Wettervorhersage met.no");
             <li>Windgeschwindigkeit: ${details.wind_speed * 3.6} (km/h)</li>
             </ul>`;
 
-            marker.setPopupContent(popup).openPopup();
+            //Wettericon(s)
+        let symbol = jsondata.properties.timeseries[0].data.next_1_hours.summary.symbol_code;
+        popup += `<img src="icons/${symbol}.svg" alt="${symbol}"
+        style="width:32px">`;
+        
+           
+        
+        
+        marker.setPopupContent(popup).openPopup();
 
 
 };
