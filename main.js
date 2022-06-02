@@ -107,9 +107,12 @@ layerControl.addOverlay(overlays.weather, "Wettervorhersage met.no");
             </ul>`;
 
             //Wettericon(s)
-        let symbol = jsondata.properties.timeseries[0].data.next_1_hours.summary.symbol_code;
-        popup += `<img src="icons/${symbol}.svg" alt="${symbol}"
-        style="width:32px">`;
+            for (let i=0; i <= 24; i+=3 ){
+                let symbol = jsondata.properties.timeseries[i].data.next_1_hours.summary.symbol_code;
+                popup += `<img src="icons/${symbol}.svg" alt="${symbol}"
+                style="width:32px">`;
+            }
+            
         
            
         
