@@ -30,7 +30,10 @@ L.control.scale({
 
 // Windvorhersage
 async function loadWind(url) {
-
+    const response = await fetch (url);
+    const jsondata = await response.json();
+    console.log(jsondata);
+    
 };
 loadWind("https://geographie.uibk.ac.at/webmapping/ecmwf/data/wind-10u-10v-europe.json");
 
